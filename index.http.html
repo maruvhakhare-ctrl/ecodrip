@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ECO DRIP Solar-Powered Intelligent Drip Irrigation Dashboard" />
+  <title>ECO DRIP | Smart Irrigation Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-frame">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 40 40" class="brand-logo" aria-label="ECO DRIP">
+            <path d="M20 3C11 11 4 18 4 25C4 32 11 36 20 36C29 36 36 32 36 25C36 18 29 11 20 3Z" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M14 20C16 19 18 19 20 21C22 24 25 23 27 21" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M18 26C18 28 19 29 20 31C21 29 22 28 22 26" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </div>
+        <div>
+          <span class="brand-kicker">QUINTAL 2</span>
+          <div class="brand-title">ECO DRIP</div>
+        </div>
+      </div>
+
+      <div class="farm-card">
+        <div class="farm-card-header">
+          <span class="mini-label">Active Farm</span>
+          <span class="status-dot online"></span>
+        </div>
+        <div class="farm-name">Vhembe Agro Hub</div>
+        <div class="farm-location">
+          <svg class="icon-sm" viewBox="0 0 24 24">
+            <path d="M3 21L12 3L21 21" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M12 3L12 21" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+          Limpopo, South Africa
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-label">Operations</div>
+        <a class="nav-link active" href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12L12 3L21 12" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M5 12V21H19V12" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span>Dashboard</span>
+        </a>
+        <a class="nav-link" href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 5H20V19H4Z" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M8 13C8 11 9 10 11 10H12C14 10 15 11 15 13C15 15 14 16 12 16H11" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span>Field Sensors</span>
+        </a>
+        <a class="nav-link" href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 19C7 17 10 17 12 19C14 17 17 17 20 19" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M4 12C7 10 10 10 12 12C14 10 17 10 20 12" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M4 5C7 3 10 3 12 5C14 3 17 3 20 5" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span>Irrigation Flow</span>
+        </a>
+        <a class="nav-link" href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6H20V14H4Z" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M8 20H16" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span>Water Tanks</span>
+        </a>
+        <a class="nav-link" href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 19L19 5" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M6 6H16V16" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span>Solar System</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-section">
+        <div class="nav-label">System Health</div>
+        <div class="health-row">
+          <span class="health-label">Water Quality</span>
+          <span class="health-status good">Clean</span>
+        </div>
+        <div class="health-row">
+          <span class="health-label">Pump Flow</span>
+          <span class="health-status good">Stable</span>
+        </div>
+        <div class="health-row">
+          <span class="health-label">Signal</span>
+          <span class="health-status wifi">WiFi OK</span>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="primary-button small-button">
+          <svg class="icon-sm" viewBox="0 0 24 24">
+            <path d="M4 12H20" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M12 4L20 12L12 20" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+          Manual Pump
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="topbar">
+        <div>
+          <div class="page-tag">Smart Climate Control</div>
+          <h1>Farm Operations Dashboard</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="syncButton">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 6A8 8 0 0 0 4 6" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M4 18A8 8 0 0 0 20 18" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M18 3L20 6L17 8" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M6 21L4 18L7 16" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+            <span>Sync</span>
+          </button>
+          <button class="icon-button alert-button" id="connectButton">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 11C8 7 16 7 20 11" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M6 15C10 12 14 12 18 15" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M8 19C11 17 13 17 16 19" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+            <span id="connectText">ESP32 WiFi Online</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="summary-grid" id="metricCards">
+        <article class="summary-card soil">
+          <div class="card-head">
+            <span class="card-title">Soil Moisture</span>
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3C6 11 4 15 4 17C4 20 7 22 12 22C17 22 20 20 20 17C20 15 18 11 12 3Z" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-value"><span id="soilValue">68</span><span class="unit">%</span></span>
+            <span class="metric-change good" id="soilChange">+3%</span>
+          </div>
+          <div class="meter">
+            <div class="meter-track">
+              <div class="meter-fill soil-fill" id="soilMeter" style="width:68%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-footer-label">Field Zone A</span>
+            <span class="card-footer-status good">Optimal</span>
+          </div>
+        </article>
+
+        <article class="summary-card pump">
+          <div class="card-head">
+            <span class="card-title">Pump Status</span>
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 3H17V10C17 12 15 13 12 15C9 13 7 12 7 10Z" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M7 16V21" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M17 16V21" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M5 21H19" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-value pump-state" id="pumpValue">ON</span>
+            <span class="metric-change good" id="pumpChange">24 L/min</span>
+          </div>
+          <div class="meter">
+            <div class="meter-track">
+              <div class="meter-fill pump-fill" id="pumpMeter" style="width:76%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-footer-label">Water Delivery</span>
+            <span class="card-footer-status good">Active</span>
+          </div>
+        </article>
+
+        <article class="summary-card tank">
+          <div class="card-head">
+            <span class="card-title">Water Tank</span>
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 3H18V7C18 9 16 10 14 11V19C14 20 13 21 12 21C11 21 10 20 10 19V11C8 10 6 9 6 7Z" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-value"><span id="tankValue">72</span><span class="unit">%</span></span>
+            <span class="metric-change" id="tankChange">1200 L</span>
+          </div>
+          <div class="meter">
+            <div class="meter-track">
+              <div class="meter-fill tank-fill" id="tankMeter" style="width:72%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-footer-label">Reservoir</span>
+            <span class="card-footer-status normal">Enough</span>
+          </div>
+        </article>
+
+        <article class="summary-card solar">
+          <div class="card-head">
+            <span class="card-title">Solar & Battery</span>
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L3 15H11L8 22L20 8H11Z" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-value"><span id="batteryValue">86</span><span class="unit">%</span></span>
+            <span class="metric-change good" id="batteryChange">Solar 92%</span>
+          </div>
+          <div class="meter">
+            <div class="meter-track">
+              <div class="meter-fill solar-fill" id="batteryMeter" style="width:86%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-footer-label">PV Charging</span>
+            <span class="card-footer-status good">Online</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <section class="panel span-2">
+          <div class="panel-head">
+            <div>
+              <span class="panel-kicker">Field Intelligence</span>
+              <h2>Soil Moisture Trend</h2>
+            </div>
+            <div class="panel-controls">
+              <button class="period active">24H</button>
+              <button class="period">7D</button>
+              <button class="period">30D</button>
+            </div>
+          </div>
+          <div class="chart-frame">
+            <canvas id="moistureChart" width="800" height="300"></canvas>
+          </div>
+          <div class="chart-legend">
+            <span><i class="legend-line moisture"></i>Soil Moisture</span>
+            <span><i class="legend-line water"></i>Watering Events</span>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head compact">
+            <div>
+              <span class="panel-kicker">System</span>
+              <h2>Connectivity</h2>
+            </div>
+            <span class="live-badge">
+              <span class="status-dot online"></span>
+              Live
+            </span>
+          </div>
+          <div class="connection-list">
+            <div class="connect-row">
+              <span class="connect-label">
+                <svg class="icon-sm" viewBox="0 0 24 24">
+                  <path d="M4 11C8 7 16 7 20 11" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M6 15C10 12 14 12 18 15" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M8 19C11 17 13 17 16 19" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                WiFi Node
+              </span>
+              <span class="connect-value good">Online</span>
+            </div>
+            <div class="connect-row">
+              <span class="connect-label">
+                <svg class="icon-sm" viewBox="0 0 24 24">
+                  <path d="M7 5H17V12C17 14 15 15 12 16C9 15 7 14 7 12Z" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M9 17L12 21L15 17" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                Bluetooth ESP32
+              </span>
+              <span class="connect-value good">Connected</span>
+            </div>
+            <div class="connect-row">
+              <span class="connect-label">
+                <svg class="icon-sm" viewBox="0 0 24 24">
+                  <path d="M8 4H16V10C16 13 14 14 12 16C10 14 8 13 8 10Z" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                Gateway
+              </span>
+              <span class="connect-value">
+                <span class="gateway-signal">
+                  <span></span><span></span><span></span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="automation">
+            <div class="automation-head">
+              <span>Automation Mode</span>
+              <span class="mode-switch">
+                <span class="switch-track">
+                  <span class="switch-button"></span>
+                </span>
+              </span>
+            </div>
+            <div class="automation-status">
+              <div>
+                <span class="status-label">Next Irrigation</span>
+                <span class="status-time">07:45 AM</span>
+              </div>
+              <button class="secondary-button">Schedule</button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="lower-grid">
+        <section class="panel">
+          <div class="panel-head compact">
+            <div>
+              <span class="panel-kicker">Field Operations</span>
+              <h2>Irrigation History</h2>
+            </div>
+            <button class="icon-button round-button">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 7H20" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M4 12H20" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M4 17H20" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+          <div class="history-list" id="historyList">
+            <article class="history-item">
+              <span class="history-time">06:30</span>
+              <span class="history-line">
+                <span class="history-dot"></span>
+                <span class="history-text">Zone A watered</span>
+              </span>
+              <span class="history-duration">14 min</span>
+            </article>
+            <article class="history-item">
+              <span class="history-time">05:45</span>
+              <span class="history-line">
+                <span class="history-dot"></span>
+                <span class="history-text">Pump cycle complete</span>
+              </span>
+              <span class="history-duration">11 min</span>
+            </article>
+            <article class="history-item">
+              <span class="history-time">04:15</span>
+              <span class="history-line">
+                <span class="history-dot"></span>
+                <span class="history-text">Moisture check</span>
+              </span>
+              <span class="history-duration">Normal</span>
+            </article>
+            <article class="history-item">
+              <span class="history-time">02:00</span>
+              <span class="history-line">
+                <span class="history-dot alert-dot"></span>
+                <span class="history-text">Low battery threshold</span>
+              </span>
+              <span class="history-duration">Info</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head compact">
+            <div>
+              <span class="panel-kicker">Alerts</span>
+              <h2>System Alerts</h2>
+            </div>
+            <span class="alert-count">3</span>
+          </div>
+          <div class="alerts-list">
+            <article class="alert-item">
+              <span class="alert-icon warning">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3L2 21H22Z" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 9H12.01" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 15H12.01" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </span>
+              <div>
+                <span class="alert-title">Water Tank Low</span>
+                <span class="alert-text">Tank level is below 30%</span>
+              </div>
+              <span class="alert-severity warning">!</span>
+            </article>
+            <article class="alert-item">
+              <span class="alert-icon info">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3C7 3 3 7 3 12C3 17 7 21 12 21C17 21 21 17 21 12C21 7 17 3 12 3Z" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 8H12.01" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 11V16" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </span>
+              <div>
+                <span class="alert-title">Solar Charging</span>
+                <span class="alert-text">Charging voltage stable</span>
+              </div>
+              <span class="alert-severity info">OK</span>
+            </article>
+            <article class="alert-item">
+              <span class="alert-icon success">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12L10 17L20 7" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </span>
+              <div>
+                <span class="alert-title">Irrigation Complete</span>
+                <span class="alert-text">Pump switched off automatically</span>
+              </div>
+              <span class="alert-severity success">OK</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head compact">
+            <div>
+              <span class="panel-kicker">Water Usage</span>
+              <h2>Daily Flow</h2>
+            </div>
+            <span class="flow-total">432 L</span>
+          </div>
+          <div class="daily-flow">
+            <div class="flow-bars">
+              <div class="bar-wrap">
+                <div class="bar" data-height="20"></div>
+                <span class="bar-label">Mon</span>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" data-height="50"></div>
+                <span class="bar-label">Tue</span>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" data-height="70"></div>
+                <span class="bar-label">Wed</span>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" data-height="45"></div>
+                <span class="bar-label">Thu</span>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" data-height="90"></div>
+                <span class="bar-label">Fri</span>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar active" data-height="80"></div>
+                <span class="bar-label">Sat</span>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar" data-height="35"></div>
+                <span class="bar-label">Sun</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="quick-actions">
+        <button class="primary-button">
+          <svg class="icon-sm" viewBox="0 0 24 24">
+            <path d="M12 4V20" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M4 12H20" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+          Water Now
+        </button>
+        <button class="secondary-button">
+          <svg class="icon-sm" viewBox="0 0 24 24">
+            <path d="M4 19H20" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M5 15L10 10L14 14L20 8" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+          Analytics
+        </button>
+        <button class="secondary-button">
+          <svg class="icon-sm" viewBox="0 0 24 24">
+            <path d="M3 18H21" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M8 13L12 9L16 13" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+          Export Report
+        </button>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 12L9 17L20 6" fill="none" stroke="currentColor" stroke-width="2" />
+      </svg>
+    </span>
+    <span class="toast-text">ESP32 connection updated</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
