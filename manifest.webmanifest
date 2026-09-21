@@ -1,0 +1,17 @@
+{
+  "name": "ECO DRIP",
+  "short_name": "ECO DRIP",
+  "description": "Farm monitoring dashboard for irrigation, water, energy, weather and alerts.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#eef4e9",
+  "theme_color": "#16371e",
+  "icons": [
+    {
+      "src": "icons/ecodrip.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
